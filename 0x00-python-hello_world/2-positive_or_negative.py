@@ -10,4 +10,4 @@ if number < 0:
 elif number > 0:
     i = 2
 
-print(f'{number} is {signedness[i]}')
+print('{} is {}'.format(number, signedness[i]))
