@@ -6,6 +6,8 @@ number = random.randint(-10000, 10000)
 i = 0
 lastdig = (abs(number) % 10)  # Capture the last digit
 suff = ["and is 0", "and is greater than 5", "and is less than 6 and not 0"]
+if number < 0:
+    lastdig = -lastdig  # Negate the number if necessary
 if lastdig != 0:
     if lastdig > 5:
         i = 1
