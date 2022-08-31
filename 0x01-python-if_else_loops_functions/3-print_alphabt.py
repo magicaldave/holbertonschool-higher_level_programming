@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 """Prints alphabet, minus q and e"""
 i = 97
 while i < 123:
