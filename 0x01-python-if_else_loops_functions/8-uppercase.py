@@ -12,4 +12,4 @@ def uppercase(str):
             x = ord(ch)
         y = chr(x)
         g = g + y
-    print(g)
+    print("{}".format(g))
