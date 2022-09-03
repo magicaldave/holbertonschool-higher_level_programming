@@ -13,4 +13,4 @@ def fizzbuzz():
         elif not i % 5 and i % 3:  # Divisible by 5 only
             print("Buzz", end=spc)
         else:  # Divisible by both
-            print("Fizzbuzz", end=spc)
+            print("FizzBuzz", end=spc)
