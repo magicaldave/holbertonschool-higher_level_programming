@@ -1,9 +1,9 @@
-#!/usr/bin/python3
-"""This is the square class!"""
+#!/usr/bin/bash
+"""0-Square Module"""
 
 
 class Square:
-    """This class defines a square"""
-    def __init__(self, size=None):
-        """This initializes a square with a size"""
+    """Square Class!"""
+
+    def __init__(self, size=0):
         self.__size = size
