@@ -18,6 +18,8 @@ class Square:
 
     def my_print(self):
         """Prints out the square provided"""
+        if self.__size == 0:
+            print("")
         for n in range(0, self.__size):
             print(self.__size * "#")
 
