@@ -17,7 +17,9 @@ def roman_to_int(r_str):
         'M': 1000
     }
     r_sum = 0
+    prev = None
     if isinstance(r_str, str):
+        # Roman numerals are read backwards, so we exploit Python and skip 0
         for n in range(1, len(r_str) + 1):
             # Capture the current character by its dict value
             # Before I wrapped it in roman_dict[], I was only
@@ -25,8 +27,8 @@ def roman_to_int(r_str):
             # By definition, the ASCII value for L is less than X,
             # But the opposite is true in roman numerals.
             current = roman_dict[r_str[-n]]
-
-            if n != 1 and current < prev:
+            #Skip comparing values if there isn't one to compare
+            if prev and current < prev:
                 r_sum -= current
             else:
                 r_sum += current
