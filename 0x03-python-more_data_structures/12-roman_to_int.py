@@ -2,7 +2,7 @@
 """Roman to Int Module"""
 
 
-def roman_to_int(roman_string):
+def roman_to_int(r_str):
     """
     Translates Roman numerals into integers based on a dictionary.
     @roman_string: roman numerals to translate as string.
@@ -17,11 +17,20 @@ def roman_to_int(roman_string):
         'M': 1000
     }
     r_sum = 0
-    for n in range(len(roman_string)):
-        rchar = roman_string[n]
-        if rchar == 'I' and n + 1 != len(roman_string) and roman_string[
-                n + 1] != 'I':
-            r_sum -= 1
-        else:
-            r_sum += roman_dict[roman_string[n]]
+    if isinstance(r_str, str):
+        for n in range(1, len(r_str) + 1):
+            # Capture the current character by its dict value
+            # Before I wrapped it in roman_dict[], I was only
+            # Comparing characters and kept getting unexplainable results!
+            # By definition, the ASCII value for L is less than X,
+            # But the opposite is true in roman numerals.
+            current = roman_dict[r_str[-n]]
+
+            if n != 1 and current < prev:
+                r_sum -= current
+            else:
+                r_sum += current
+
+            # Store it for comparison on later iterations
+            prev = current
     return r_sum
