@@ -8,9 +8,9 @@ def replace_in_list(my_list, idx, element):
     Replacing the original values.
     """
     # check for valid index
-    if idx >= 0 <= len(my_list):
+    if 0 <= idx < len(my_list):
+        # remove at idx
+        del my_list[idx]
         # add element at idx
         my_list.insert(idx, element)
-        # remove at idx + 1
-        del my_list[idx + 1]
     return my_list
