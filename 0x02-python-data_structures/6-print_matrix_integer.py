@@ -11,6 +11,8 @@ def print_matrix_integer(biglist=None):
                 print("")
                 printed = 0
             for number in sublist:
-                print("{:d}".format(number), end=" ")
+                print("{:d}".format(number), end="")
                 printed += 1
+                if printed < len(biglist):
+                    print(end=" ")
     print("")
