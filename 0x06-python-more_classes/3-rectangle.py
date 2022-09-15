@@ -4,6 +4,7 @@
 
 class Rectangle():
     """This class defines a rectangle"""
+
     def __init__(self, width=0, height=0):
         """This initializes a rectangle with a width and height"""
         if type(width) != int:
@@ -23,7 +24,7 @@ class Rectangle():
     def perimeter(self):
         if 0 in (self.__width, self.__height):
             return 0
-        return 2*self.__width + 2*self.__height
+        return 2 * self.__width + 2 * self.__height
 
     def __str__(self):
         string = ""
@@ -64,3 +65,6 @@ class Rectangle():
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+
+# This is a test of spacemacs git blame
