@@ -8,4 +8,5 @@ class BaseGeometry():
     """Nobody expects the Spanish Inquisition!"""
 
     def area(self):
+        """Well, it's not implemented"""
         raise Exception("area() is not implemented")
