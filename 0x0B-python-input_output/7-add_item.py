@@ -4,18 +4,16 @@
 """
 
 # Standard Modules
-import json
+import sys
 # My Modules
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_json = __import__('6-load_from_json_file').load_from_json_file
+save_json = __import__('5-save_to_json_file').save_to_json_file
+l_file = "add_item.json"
 
-
-
-def load_from_json_file(fp):
-    """
-    Returns JSON representation of object
-    """
-    if fp is not None:
-        with open(fp, encoding="utf-8") as infile:
-            return json.load(infile)
-    return None
+try:
+    ArgStack = load_json(l_file)
+except:
+    ArgStack = []
+for arg in sys.argv[1:]:
+    ArgStack.append(arg)
+save_json(ArgStack, l_file)
