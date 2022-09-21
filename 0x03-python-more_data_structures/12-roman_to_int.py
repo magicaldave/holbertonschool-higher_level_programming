@@ -27,7 +27,7 @@ def roman_to_int(r_str):
             # By definition, the ASCII value for L is less than X,
             # But the opposite is true in roman numerals.
             current = roman_dict[r_str[-n]]
-            #Skip comparing values if there isn't one to compare
+            # Skip comparing values if there isn't one to compare
             if prev and current < prev:
                 r_sum -= current
             else:
