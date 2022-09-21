@@ -19,3 +19,8 @@ class Student:
         if attrs is not None:
             workdict = {k: v for (k, v) in workdict.items() if k in attrs}
         return workdict
+
+    def reload_from_json(self, json):
+        """ Replaces all data in an input class"""
+        for stat in json:
+            self.__dict__[stat] = json[stat]
