@@ -15,10 +15,9 @@ class Student:
 
     def to_json(self, attrs=None):
         """ Returns dict representation like 8-class_to_json """
-        workdict = self.__dict__.copy()
         if attrs is not None:
-            workdict = {k: v for (k, v) in workdict.items() if k in attrs}
-        return workdict
+            return {k: v for (k, v) in self.__dict__.items() if k in attrs}
+        return self.__dict__
 
     def reload_from_json(self, json):
         """ Replaces all data in an input class"""
