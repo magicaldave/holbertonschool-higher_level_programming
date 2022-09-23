@@ -16,11 +16,11 @@ class Rectangle(Base):
         You have to input measurements for the
         rectangle in order to make one.
         """
-        super().__init__(id)
         self.__width = int_check(width, "width")
         self.__height = int_check(height, "height")
         self.__x = int_check(x, "x")
         self.__y = int_check(y, "y")
+        super().__init__(id)
 
     @property
     def width(self):
