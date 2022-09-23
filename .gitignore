@@ -4,3 +4,4 @@
 *.txt
 /0x0B-python-input_output/test.py
 *.json
+/0x0C-python-almost_a_circle/models/__pycache__/

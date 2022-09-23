@@ -3,7 +3,6 @@
 Rectangle Class module
 """
 
-import models.base
 from models.base import Base, int_check
 
 
