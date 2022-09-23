@@ -23,9 +23,9 @@ def int_check(val, name):
     """
     Checks if the input is a valid int
     """
-    if isinstance(val) != int:
+    if not isinstance(val, int):
         raise TypeError("{} must be an integer".format(name))
-    if val <= 0:
+    if (val <= 0 and name not in ('x', 'y')) or val < 0:
         raise ValueError("{} must be {} 0".format(
             name, ">=" if name in ('x', 'y') else ">"))
     return val
