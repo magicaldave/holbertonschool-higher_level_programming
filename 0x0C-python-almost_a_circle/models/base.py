@@ -17,3 +17,15 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+
+def int_check(val, name):
+    """
+    Checks if the input is a valid int
+    """
+    if isinstance(val) != int:
+        raise TypeError("{} must be an integer".format(name))
+    if val <= 0:
+        raise ValueError("{} must be {} 0".format(
+            name, ">=" if name in ('x', 'y') else ">"))
+    return val
