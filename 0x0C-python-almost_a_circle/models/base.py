@@ -18,22 +18,13 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    def hw_check(self, val, name):
+    def int_check(self, val, name):
         """
         Checks if the input is a valid int
         """
-        if type(val) is not int:
-            raise TypeError("{:s} must be an integer".format(name))
-        if val <= 0:
-            raise ValueError("{:s} must be > 0".format(name))
-        return val
-
-    def xy_check(self, val, name):
-        """
-        Checks if the input is a valid int
-        """
-        if type(val) is not int:
-            raise TypeError("{:s} must be an integer".format(name))
-        if val < 0:
-            raise ValueError("{:s} must be >= 0".format(name))
+        if not isinstance(val, int):
+            raise TypeError(f"{name} must be an integer")
+        if (val <= 0 and name not in ('x', 'y')) or val < 0:
+            raise ValueError(
+                f"{name} must be {'>=' if name in ('x', 'y') else '>'} 0")
         return val
