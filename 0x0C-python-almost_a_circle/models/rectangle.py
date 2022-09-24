@@ -30,7 +30,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Width Setter"""
-        self.__width = self.int_check(value, "height")
+        self.__width = self.int_check(value, "width")
 
     @property
     def height(self):
