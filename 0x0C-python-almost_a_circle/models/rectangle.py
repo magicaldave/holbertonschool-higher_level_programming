@@ -3,7 +3,7 @@
 Rectangle Class module
 """
 
-from models.base import Base, hw_check, xy_check
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -16,10 +16,10 @@ class Rectangle(Base):
         You have to input measurements for the
         rectangle in order to make one.
         """
-        self.__width = hw_check(width, "width")
-        self.__height = hw_check(height, "height")
-        self.__x = xy_check(x, "x")
-        self.__y = xy_check(y, "y")
+        self.__width = Base.hw_check(self, width, "width")
+        self.__height = Base.hw_check(self, height, "height")
+        self.__x = Base.xy_check(self, x, "x")
+        self.__y = Base.xy_check(self, y, "y")
         super().__init__(id)
 
     @property
@@ -30,7 +30,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Width Setter"""
-        self.__height = hw_check(value, "height")
+        self.__height = Base.hw_check(self, value, "height")
 
     @property
     def height(self):
@@ -40,7 +40,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter for height"""
-        self.__height = hw_check(value, "height")
+        self.__height = Base.hw_check(self, value, "height")
 
     @property
     def x(self):
@@ -50,7 +50,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter for height"""
-        self.__height = xy_check(value, "x")
+        self.__height = Base.xy_check(self, value, "x")
 
     @property
     def y(self):
@@ -60,4 +60,4 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setter for height"""
-        self.__height = xy_check(value, "y")
+        self.__height = Base.xy_check(self, value, "y")
