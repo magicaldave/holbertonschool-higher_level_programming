@@ -24,9 +24,9 @@ def hw_check(val, name):
     Checks if the input is a valid int
     """
     if type(val) is not int:
-        raise TypeError("{} must be an integer".format(name))
+        raise TypeError("{:s} must be an integer".format(name))
     if val <= 0:
-        raise ValueError("{} must be > 0".format(name))
+        raise ValueError("{:s} must be > 0".format(name))
     return val
 
 
@@ -35,7 +35,7 @@ def xy_check(val, name):
     Checks if the input is a valid int
     """
     if type(val) is not int:
-        raise TypeError("{} must be an integer".format(name))
+        raise TypeError("{:s} must be an integer".format(name))
     if val < 0:
-        raise ValueError("{} must be >= 0".format(name))
+        raise ValueError("{:s} must be >= 0".format(name))
     return val
