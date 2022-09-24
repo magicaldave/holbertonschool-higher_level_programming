@@ -3,7 +3,7 @@
 Rectangle Class module
 """
 
-from models.base import Base, int_check
+from models.base import Base, hw_check, xy_check
 
 
 class Rectangle(Base):
@@ -30,7 +30,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Width Setter"""
-        self.__height = int_check(value, "height")
+        self.__height = hw_check(value, "height")
 
     @property
     def height(self):
@@ -40,7 +40,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter for height"""
-        self.__height = int_check(value, "height")
+        self.__height = hw_check(value, "height")
 
     @property
     def x(self):
@@ -50,7 +50,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter for height"""
-        self.__height = int_check(value, "x")
+        self.__height = xy_check(value, "x")
 
     @property
     def y(self):
@@ -60,4 +60,4 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setter for height"""
-        self.__height = int_check(value, "y")
+        self.__height = xy_check(value, "y")
