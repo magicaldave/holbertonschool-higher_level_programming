@@ -61,3 +61,7 @@ class Rectangle(Base):
     def y(self, value):
         """Setter for height"""
         self.__y = self.int_check(value, "y")
+
+    def area(self):
+        """returns square area"""
+        return self.__height * self.__width
