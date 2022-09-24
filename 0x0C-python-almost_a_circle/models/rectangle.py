@@ -70,4 +70,7 @@ class Rectangle(Base):
         """
         Prints out the rectangle you made!
         """
-        print(("#" * self.__width + "\n") * self.__height, sep="", end="")
+        print(self.__y * "\n",
+              (self.__x * " " + "#" * self.__width + "\n") * self.__height,
+              sep="",
+              end="")
