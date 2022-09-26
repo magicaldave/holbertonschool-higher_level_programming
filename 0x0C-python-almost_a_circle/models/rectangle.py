@@ -79,3 +79,13 @@ class Rectangle(Base):
               (self.__x * " " + "#" * self.__width + "\n") * self.__height,
               sep="",
               end="")
+
+    def update(self, *args):
+        """
+        Updates rectangle according to arguments provided
+        In order, you must provide:
+        Id, Width, Height, X, Y
+        """
+        attrs = ['id', 'width', 'height', 'x', 'y']
+        for i, newattr in enumerate(args):
+            setattr(self, attrs[i], self.int_check(newattr, attrs[i]))
