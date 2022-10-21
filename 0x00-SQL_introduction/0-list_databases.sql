@@ -1,2 +1,2 @@
---- Lists all databases associated with your server
+-- Lists all databases associated with your server
 SHOW DATABASES;
