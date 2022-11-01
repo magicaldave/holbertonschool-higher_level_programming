@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """This module fetches the status of an http site"""
 from urllib import request
 
