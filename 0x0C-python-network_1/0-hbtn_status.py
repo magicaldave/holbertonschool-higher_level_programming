@@ -2,7 +2,8 @@
 """This module fetches the status of an http site"""
 from urllib import request
 
-with request.urlopen('https://intranet.hbtn.io/status') as response:
+req = request.Request('https://intranet.hbtn.io/status')
+with request.urlopen(req) as response:
     response = response.read()
     print('Body response:')
     print('\t- type: {}'.format(
