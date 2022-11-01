@@ -6,7 +6,7 @@ with request.urlopen('https://intranet.hbtn.io/status') as response:
     response = response.read()
     print(
         'Body response:',
-        '- type: ' + str(type(response)),  # type of object from response
-        '- content: ' + str(response),  # raw content
-        '- utf8 content: ' + response.decode('utf8'),  # utf8 content
+        '- type: {}'.format(type(response)),  # type of object from response
+        '- content: {}'.format(response),  # raw content
+        '- utf8 content: {}'.format(response.decode('utf8')),  # utf8 content
         sep='\n\t')  # Adds newline and four spaces each time
