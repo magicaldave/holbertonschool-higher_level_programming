@@ -6,5 +6,7 @@ url and displays the X-Request-Id from the response's header
 from sys import argv
 from urllib import request
 
-with request.urlopen(argv[1]) as response:
-    print(response.info().get('X-Request-Id'))
+if __name__ == '__main__':
+    with request.urlopen(argv[1]) as response:
+        # print(response.read())
+        print(response.info().get('X-Request-Id'))
