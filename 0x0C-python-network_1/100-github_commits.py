@@ -5,21 +5,15 @@ if __name__ == "__main__":
     from sys import argv
     import requests
 
-    payload = {'per_page': 10, 'page': 1}
+    commit_list = requests.get(
+        'https://api.github.com/repos/{}/{}/commits'.format(argv[2], argv[1]),
+        params={
+            'per_page': 10,
+            'page': 1
+        },
+        timeout=10).json()
 
-    r = requests.get('https://api.github.com/repos/{}/{}/commits'.format(
-        argv[2], argv[1]),
-                     params=payload,
-                     timeout=10)
-
-    for commit in r.json():
-        print("{}: {}".format(commit.get('sha'),
-                              commit.get('commit').get('author').get('name')))
-    # commit_list = []
-    # for commit in r.json():
-    #    sha = commit.get("sha")
-    #    author = commit.get("commit", {}).get("author", {}).get("name")
-    #    commit_list.append("{}: {}".format(sha, author))
-
-    # for i in commit_list:
-    #    print(i)
+    for commit in commit_list:
+        print(
+            commit.get('sha') + ':' +
+            commit.get('commit').get('author').get('name'))
