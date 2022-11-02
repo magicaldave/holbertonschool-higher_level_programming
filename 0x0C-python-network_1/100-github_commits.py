@@ -15,5 +15,5 @@ if __name__ == "__main__":
 
     for commit in commit_list:
         print(
-            commit.get('sha') + ':' +
+            commit.get('sha') + ': ' +
             commit.get('commit').get('author').get('name'))
