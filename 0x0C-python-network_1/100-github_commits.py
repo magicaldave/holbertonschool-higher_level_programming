@@ -8,7 +8,7 @@ if __name__ == "__main__":
     payload = {'per_page': 2, 'page': 1}
 
     r = requests.get('https://api.github.com/repos/{}/{}/commits'.format(
-        argv[1], argv[2]),
+        argv[2], argv[1]),
                      params=payload,
                      timeout=10)
 
