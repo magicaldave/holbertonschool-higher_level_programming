@@ -5,7 +5,7 @@ if __name__ == "__main__":
     from sys import argv
     import requests
 
-    payload = {'per_page': 2, 'page': 1}
+    payload = {'per_page': 10, 'page': 1}
 
     r = requests.get('https://api.github.com/repos/{}/{}/commits'.format(
         argv[2], argv[1]),
