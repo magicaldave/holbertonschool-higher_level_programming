@@ -14,6 +14,4 @@ if __name__ == "__main__":
         timeout=10).json()
 
     for commit in commit_list:
-        print(
-            commit.get('sha') + ': ' +
-            commit.get('commit').get('author').get('name'))
+        print(commit['sha'] + ': ' + commit['commit']['author']['name'])
