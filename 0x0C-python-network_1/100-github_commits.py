@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""gets the last 10 commits from repo"""
+"""
+Lists the last ten commits from a given repository
+"""
 
 if __name__ == "__main__":
     from sys import argv
