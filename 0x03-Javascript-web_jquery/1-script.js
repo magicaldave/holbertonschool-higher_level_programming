@@ -1,1 +1,2 @@
-$('header').css('color', 'red');
+const $ = window.$;
+$('header').css({ color: 'red' });
