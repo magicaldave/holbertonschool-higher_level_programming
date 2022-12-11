@@ -1,2 +1,4 @@
 const $ = window.$;
-$('header').css({ color: 'red' });
+$(document).ready(function () {
+  $('header').css({ color: 'red' });
+});

@@ -1,4 +1,6 @@
 const $ = window.$;
-$('#add_item').click(function () {
-  $('<li>Item</li>').appendTo('UL.my_list');
+$(document).ready(function () {
+  $('#add_item').click(function () {
+    $('<li>Item</li>').appendTo('UL.my_list');
+  });
 });
